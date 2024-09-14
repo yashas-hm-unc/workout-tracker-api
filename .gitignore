@@ -1,0 +1,25 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+__MACOSX__/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+test*
+
+# Add after this line
+
+# Node Specific
+node_modules/
+.env
