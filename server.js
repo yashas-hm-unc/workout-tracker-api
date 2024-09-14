@@ -14,10 +14,11 @@ server.use(bodyParser.urlencoded({extended: true}));
 require('dotenv').config();
 
 const {options} = require('./docs/swaggerDocs');
-
-
-
 router.use('/docs', swaggerUI.serve, swaggerUI.setup(options));
+
+const workoutRoutes = require('./routes/workout_routes');
+router.use('/workouts', workoutRoutes);
+
 server.use('/api/v1', router);
 
 const PORT = process.env.PORT || 3000

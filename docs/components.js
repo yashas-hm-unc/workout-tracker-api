@@ -25,6 +25,11 @@
  *         avgHeartRate:
  *           type: integer
  *           example: 110
+ *         weather:
+ *           type: string
+ *           example: clear sky
+ *         image:
+ *          type: string
  *   responses:
  *     ServerSuccessResponse:
  *       description: Success

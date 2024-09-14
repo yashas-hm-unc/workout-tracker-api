@@ -10,10 +10,9 @@ const client = new Client({
     port: 5432,
 });
 
-// Connect to PostgreSQL
-// client.connect()
-//     .then(() => console.log('Connected to PostgreSQL'))
-//     .catch(err => console.error('Connection error', err.stack));
+client.connect()
+    .then(() => console.log('Connected to PostgreSQL'))
+    .catch(err => console.error('Connection error', err.stack));
 
 module.exports = {
     client

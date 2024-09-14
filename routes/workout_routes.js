@@ -190,6 +190,45 @@ router.get('/getByDistance', controller.getWorkoutByDistance);
  *     patch:
  *       summary: Endpoint to update workout by id
  *       tags: [Workouts]
+ *       requestBody:
+ *         description: All data required to update a workout
+ *         required: true
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 startTime:
+ *                   type: string
+ *                   pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$'
+ *                   description: Timestamp of workout start time
+ *                   example: 2024-09-14T12:10:43.000Z
+ *                   required: true
+ *                 endTime:
+ *                   type: string
+ *                   pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$'
+ *                   description: Timestamp of workout end time
+ *                   example: 2024-09-14T12:10:43.000Z
+ *                   required: true
+ *                 distance:
+ *                   type: number
+ *                   description: Distance covered in workout in meters
+ *                   example: 2500
+ *                   required: true
+ *                 avgHeartRate:
+ *                   type: integer
+ *                   description: Average heart date during workout
+ *                   example: 110
+ *                   required: true
+ *                 weather:
+ *                   type: string
+ *                   description: Weather details
+ *                   example: clear sky
+ *                   required: true
+ *                 imageUploaded:
+ *                   type: boolean
+ *                   description: Flag if route image is uploaded or not
+ *                   required: true
  *       parameters:
  *         - in: path
  *           name: id
