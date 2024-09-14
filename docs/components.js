@@ -10,10 +10,10 @@
  *           example: 0
  *         startTime:
  *           type: string
- *           example: 2024-12-20T12:44:00.000Z
+ *           example: 2024-12-20 12:44:00
  *         endTime:
  *           type: string
- *           example: 2024-12-20T12:44:00.000Z
+ *           example: 2024-12-20 12:44:00 
  *         duration:
  *           type: integer
  *           description: Value in minutes

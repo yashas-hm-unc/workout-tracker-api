@@ -69,7 +69,17 @@ async function getAllWorkouts(req, res) {
 
 async function getWorkoutById(req, res) {
     try {
+        const workoutId = req.params.id;
         
+        const query = `SELECT * FROM allWorkouts WHERE id = ${workoutId};`;
+        
+        const results  = await client.query(query);
+        
+        const data =  Workouts.createObject(results.rows[0]);
+        
+        serverSuccess(res,  [
+           data.toJson(), 
+        ]);
     } catch (error) {
         serverError(res, {
             error: error,

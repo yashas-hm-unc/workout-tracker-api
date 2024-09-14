@@ -100,7 +100,7 @@ router.get('/getAll', controller.getAllWorkouts);
  *               schema:
  *                 $ref: '#/components/schemas/Workouts'
  */
-router.post('/getById/:id', controller.getWorkoutById);
+router.get('/getById/:id', controller.getWorkoutById);
 
 /**
  * @swagger
@@ -200,15 +200,15 @@ router.get('/getByDistance', controller.getWorkoutByDistance);
  *               properties:
  *                 startTime:
  *                   type: string
- *                   pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$'
+ *                   pattern: '^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$'
  *                   description: Timestamp of workout start time
- *                   example: 2024-09-14T12:10:43.000Z
+ *                   example: 2024-09-14 12:10:43
  *                   required: true
  *                 endTime:
  *                   type: string
- *                   pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$'
+ *                   pattern: '^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$'
  *                   description: Timestamp of workout end time
- *                   example: 2024-09-14T12:10:43.000Z
+ *                   example: 2024-09-14 12:10:43
  *                   required: true
  *                 distance:
  *                   type: number
